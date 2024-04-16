@@ -1,0 +1,24 @@
+@import url('./_cdn.scss');
+@import url('./_variables.scss');
+@import url('./header.scss');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  
+  html {
+    font-family: "Raleway", "Cardo", sans-serif;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+  }
