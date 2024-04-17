@@ -17,10 +17,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 130px;
-    @media (max-width: 320px) {
-        margin-bottom: 50px;
-    }
 }
 
 .header-logo{

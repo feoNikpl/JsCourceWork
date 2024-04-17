@@ -1,6 +1,16 @@
 @import './mixins.scss';
 
+.items-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(314px, auto));
+    @media (max-width: 320px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .items-list__item{
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -9,6 +19,7 @@
 .items-list__item-content{
     flex-grow: 1;
     position: relative;
+    height: 300px;
     img{
         object-fit: cover;
         object-position: center;
@@ -37,14 +48,17 @@
     bottom: 0;
 }
 
-
-
-
 .items-list__item-content-complain{
     @include button;
+    img{
+        src: url('../img/complainIcon.png');
+    }
 }
 .items-list__item-content-board{
     @include button;
+    img{
+        src: url('../img/pencil-solid.svg');
+    }
 }
 
 .items-list__item-info{
@@ -63,4 +77,9 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.item-info__descr{
+    display: grid;
+	align-items: center;
 }
