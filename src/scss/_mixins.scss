@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+@mixin button{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: 70%;
+        height: 70%;
+    }
+    &:hover{
+        animation-name: buttonAnimation;
+        animation-duration: 0.5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+    }
+    &:active{
+        background-color: $_red_action;
+        box-shadow: none;
+    }
+}
+
+@keyframes buttonAnimation {
+    0%{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 4px 4px 30px 0px $_red_normal;
+        transform: scale(0.95);
+    }
+}

@@ -1,0 +1,66 @@
+@import './mixins.scss';
+
+.items-list__item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:314px;
+}
+.items-list__item-content{
+    flex-grow: 1;
+    position: relative;
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+.items-list__item-content-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.items-list__item-content>img:hover + .items-list__item-content-menu{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.items-list__item-content-menu:hover{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+.items-list__item-content-complain{
+    @include button;
+}
+.items-list__item-content-board{
+    @include button;
+}
+
+.items-list__item-info{
+    display: flex;
+}
+
+.item-info__photo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -10,8 +10,9 @@
     <header class="header">
         <div class="container">
             <div class="header-wrap">
-                <div class="header_logo">
-                    Pinterest
+                <div class="header-logo">
+                    <i class="fa-brands fa-pinterest header-logo__left"></i>
+                    <span class="header-logo__right">interest</span>
                 </div>
                 <div class="header_text-field">
                     <div class="header_text-field__icon header_text-field__icon_search">
@@ -19,15 +20,56 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <select>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                    <i class="fa fa-caret-down"></i>
-                  </div>
+                    <button class="dropbtn">Показать все  <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Показать все</a>
+                        <a href="#">Доска 1</a>
+                        <a href="#">Доска 2</a>
+                        <a href="#">Доска 3</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <section class="items">
+        <div class="items-list" id="items">
+            <div class="items-list__item">
+                <div class="items-list__item-content">
+                    <img src="./img/complainIcon.png">
+                    <div class="items-list__item-content-menu">
+                        <button class="items-list__item-content-complain">
+                            <img src="./img/complainIcon.png">
+                        </button>
+                        <button class="items-list__item-content-board">
+                            <img src="./img/pencil-solid.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="items-list__item-info">
+                    <div class="item-info__photo">
+                        <img src="./img/complainIcon.png" alt="#">
+                    </div>
+                    <div class="item-info__descr">
+                        <span class="item-info__descr-item"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="addToDeskModal">
+        <div class="modal__content">
+            <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+            <h1 class="modal__title">Пожаловаться</h1>
+            
+        </div>
+    </div>
+    <div class="modal" id="complainModal">
+        <div class="modal__content">
+            <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+            <h1 class="modal__title">Пожаловаться</h1>
+            
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
