@@ -16,16 +16,16 @@
                 </div>
                 <div class="header_text-field">
                     <div class="header_text-field__icon header_text-field__icon_search">
-                        <input class="header_text-field__input" type="text" placeholder="Найти">
+                        <input id="searchInput" class="header_text-field__input" type="text" placeholder="Найти">
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">Показать все  <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="dropbtn">Показать все <i class="fa-solid fa-chevron-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="#">Показать все</a>
-                        <a href="#">Доска 1</a>
-                        <a href="#">Доска 2</a>
-                        <a href="#">Доска 3</a>
+                        <a id="0" href="#">Показать все</a>
+                        <a id="1" href="#">Доска 1</a>
+                        <a id="2" href="#">Доска 2</a>
+                        <a id="3" href="#">Доска 3</a>
                     </div>
                 </div>
             </div>
@@ -33,40 +33,38 @@
     </header>
     <section class="items">
         <div class="items-list" id="items">
-            <div class="items-list__item">
-                <div class="items-list__item-content">
-                    <img src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/82.jpg">
-                    <div class="items-list__item-content-menu">
-                        <button class="items-list__item-content-complain">
-                            <img src="./img/complainIcon.png">
-                        </button>
-                        <button class="items-list__item-content-board">
-                            <img src="./img/pencil-solid.svg">
-                        </button>
-                    </div>
-                </div>
-                <div class="items-list__item-info">
-                    <div class="item-info__photo">
-                        <img src="./img/complainIcon.png" alt="#">
-                    </div>
-                    <div class="item-info__descr">
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <div class="modal" id="addToDeskModal">
         <div class="modal__content">
             <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
             <h1 class="modal__title">Добавить на доску</h1>
-            
+            <div class="modal__description">
+                <a id="1" href="#">Доска 1</a>
+                <a id="2" href="#">Доска 2</a>
+                <a id="3" href="#">Доска 3</a>
+            </div>
         </div>
     </div>
     <div class="modal" id="complainModal">
         <div class="modal__content">
             <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
             <h1 class="modal__title">Пожаловаться</h1>
-            
+            <div class="modal__description">
+                <label>
+                    <input type="checkbox" id="0">Первая причина
+                </label>
+                <label>
+                    <input type="checkbox" id="1">Вторая причина
+                </label>
+                <label>
+                    <input type="checkbox" id="2">Третья причина
+                </label>
+                <label>
+                    <input type="checkbox" id="3">Четвертая причина
+                </label>
+            </div>
+            <button class="modal__confirm-button">Отправить</button>
         </div>
     </div>
     <script type="module" src="./js/index.js"></script>

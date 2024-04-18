@@ -1,4 +1,4 @@
-function getData(key){
+function getStorageData(key){
     if(!isKeyExist(key))
     {
         alert('No key in storage')
@@ -7,13 +7,13 @@ function getData(key){
     return JSON.parse(localStorage.getItem(key));
 }
 
-function setData(key, data){
+function setStorageData(key, data){
     localStorage.setItem(key, JSON.stringify(data))
     return true
 }
 
-function isKeyExist(key){
+function isStorageKeyExist(key){
     return localStorage.getItem(key) !== null;
 }
 
-export {setData, getData, isKeyExist}
+export {setStorageData, getStorageData, isStorageKeyExist}

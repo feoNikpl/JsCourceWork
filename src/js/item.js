@@ -1,6 +1,8 @@
 import descButtomIcon from '../img/pencil-solid.svg'
 import complainButtonIcon from '../img/complainIcon.png'
 
+let selectedIdx = null;
+
 function createItem(item){
     let itemMain = createDiv("items-list__item");
     let itemContent = createDiv("items-list__item-content");
@@ -8,18 +10,23 @@ function createItem(item){
     let contentMenu = createDiv("items-list__item-content-menu");
 
     let complainButton = createButton(complainButtonIcon, "items-list__item-content-complain");
-    let complainModal = document.getElementById('complainModal');
-    let tagBody = document.getElementsByTagName('body');
+    
     complainButton.onclick = function (e) {
       e.preventDefault();
+      let tagBody = document.getElementsByTagName('body')[0];
+      let complainModal = document.getElementById('complainModal');
+      selectedIdx = item.id;
       complainModal.classList.add('modal_active');
       tagBody.classList.add('hidden');
     }
 
     let deskButton = createButton(descButtomIcon, "items-list__item-content-complain");
-    let addToDeskModal = document.getElementById('addToDeskModal');
+
     deskButton.onclick = function (e) {
       e.preventDefault();
+      let addToDeskModal = document.getElementById('addToDeskModal');
+      let tagBody = document.getElementsByTagName('body')[0];
+      selectedIdx = item.id;
       addToDeskModal.classList.add('modal_active');
       tagBody.classList.add('hidden');
     }
@@ -60,5 +67,5 @@ function createImg(src){
     return retImg;
 }
 
-export {createItem};
+export {createItem, selectedIdx};
 
